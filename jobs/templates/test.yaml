@@ -12,7 +12,7 @@
          default: |
            BROUSER_NAME: chrome
       - string:
-         name: BRANCH
+         name: REFSPEC
          default: main
          description: Branch for tempest nova API tests
     pipeline-scm:
