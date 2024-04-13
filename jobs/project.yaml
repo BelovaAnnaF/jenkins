@@ -1,0 +1,7 @@
+---
+
+- project:
+    name: 'UI autotests'
+    job-description: 'UI autotests'
+    jobs:
+      - 'test'

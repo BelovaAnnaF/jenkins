@@ -1,0 +1,10 @@
+.idea
+*.iml
+target
+infra
+registry/*
+.allure
+.attach_*
+build
+/build/
+lib

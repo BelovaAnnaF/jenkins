@@ -1,0 +1,18 @@
+- scm:
+    name: git-ui-tests
+    scm:
+    - git:
+        url: https://github.com/BelovaAnnaF/QAJProOTUS-2.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${REFSPEC}
+- scm:
+    name: git-rest-autotests
+    scm:
+    - git:
+        url: https://github.com/BelovaAnnaF/QAJProOTUS-3.git
+        credentials-id: jenkins
+        branches:
+        - FETCH_HEAD
+        refspec: ${REFSPEC}
