@@ -7,7 +7,7 @@
         credentials-id: jenkins
         branches:
         - FETCH_HEAD
-        refspec: ${REFSPEC}
+        refspec: $BRANCH
 - scm:
     name: git-rest-autotests
     scm:
@@ -16,7 +16,7 @@
         credentials-id: jenkins
         branches:
         - FETCH_HEAD
-        refspec: ${REFSPEC}
+        refspec: $BRANCH
 - scm:
       name: git-runner
       scm:
@@ -25,4 +25,4 @@
                 credentials-id: jenkins
                 branches:
                     - FETCH_HEAD
-                refspec: ${REFSPEC}
+                refspec: $BRANCH
