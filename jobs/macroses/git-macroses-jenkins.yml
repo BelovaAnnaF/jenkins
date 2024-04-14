@@ -1,3 +1,4 @@
+---
 - scm:
     name: git-ui-tests
     scm:
@@ -16,3 +17,12 @@
         branches:
         - FETCH_HEAD
         refspec: ${REFSPEC}
+- scm:
+      name: git-runner
+      scm:
+          - git:
+                url: https://github.com/BelovaAnnaF/jenkins.git
+                credentials-id: jenkins
+                branches:
+                    - FETCH_HEAD
+                refspec: ${REFSPEC}

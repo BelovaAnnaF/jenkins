@@ -1,0 +1,33 @@
+- job-template:
+    name: 'runner-tests'
+    description: '<h3 style="color: green;">Running tests</h3>'
+    project-type: pipeline
+    concurrent: true
+    logrotate:
+      daysToKeep: 30
+      numToKeep: 10
+    properties:
+      - build-discarder:
+          num-to-keep: 10
+    parameters:
+      - text:
+          name: YAML_CONFIG
+          default: |
+            BASE_URL: https://otus.ru
+            BROWSER_NAME: chrome
+            BROWSER_VERSION: 121.0
+            SELENOID_ENABLED: true
+            GRID_URL: http://127.0.0.1:4445
+            TEST_VERSION: 0.0.1
+            PARALLEL: 1
+            TEST_TYPES:
+              - api
+              - ui
+      - string:
+          name: BRANCH
+          default: master
+          description: Branch for tempest barbican UI tests
+    pipeline-scm:
+      scm:
+        - git-runner
+      script-path: jenkins/runner-tests.groovy

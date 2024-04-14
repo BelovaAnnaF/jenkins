@@ -1,0 +1,29 @@
+- job-template:
+    name: 'ui'
+    description: 'Ui tests'
+    project-type: pipeline
+    concurrent: true
+    logrotate:
+      daysToKeep: 30
+      numToKeep: 10
+    parameters:
+      - string:
+          name: BRANCH
+          default: main
+          description: Branch for tempest barbican UI tests
+      - text:
+          name: YAML_CONFIG
+          default: |
+            BASE_URL: https://otus.ru
+            BROWSER_NAME: chrome
+            BROWSER_VERSION: 121.0
+            SELENOID_ENABLED: true
+            GRID_URL: http://127.0.0.1:4445
+            TEST_VERSION: 0.0.1
+            PARALLEL: 1
+    pipeline-scm:
+      scm:
+        - git-ui-tests
+      script-path: jenkins/ui.groovy
+
+

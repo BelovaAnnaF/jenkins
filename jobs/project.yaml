@@ -1,7 +1,7 @@
 ---
 
 - project:
-    name: 'UI autotests'
-    job-description: 'UI autotests'
+    name: 'Runner tests'
+    job-description: 'Runner tests'
     jobs:
-      - 'test'
+      - 'runner-tests'

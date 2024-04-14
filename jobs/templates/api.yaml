@@ -1,0 +1,24 @@
+- job-template:
+    name: 'api'
+    description: 'api tests'
+    project-type: pipeline
+    concurrent: true
+    logrotate:
+      daysToKeep: 30
+      numToKeep: 10
+    parameters:
+      - string:
+          name: BRANCH
+          default: main
+          description: Branch for tempest barbican API tests
+      - text:
+          name: YAML_CONFIG
+          default: |
+            TEST_VERSION: 0.0.1
+            PARALLEL: 4
+    pipeline-scm:
+      scm:
+        - git-api-tests
+      script-path: jenkins/api.groovy
+
+

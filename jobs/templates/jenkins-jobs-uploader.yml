@@ -1,0 +1,13 @@
+- job-template:
+    name: jobs_uploader
+    description: Jobs uploader to jenkins
+    project-type: pipeline
+    parameters:
+      - string:
+          name: BRANCH
+          default: main
+          description: Branch for tempest barbican UI tests
+    pipeline-scm:
+      scm:
+        - git-runner
+      script-path: jenkins/runner-tests.groovy
