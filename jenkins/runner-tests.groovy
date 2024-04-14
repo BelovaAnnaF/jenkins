@@ -3,7 +3,7 @@ timestamp {
         wrap([class: 'BuildUser']) {
             currentBuild.description = """
 User: ${BUILD_USER}
-Brunch: ${REFSPEC}
+Brunch: $BRANCH
 """
             config = readYaml text: env.YAML_CONFIG
 
