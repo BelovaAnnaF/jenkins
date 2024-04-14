@@ -1,4 +1,4 @@
-timeout(60) {
+timeout(15) {
     node("maven-slave") {
         wrap([class: 'BuildUser']) {
             currentBuild.description = """
