@@ -18,7 +18,7 @@
             PARALLEL: 4
     pipeline-scm:
       scm:
-        - git-api-tests
+        - git-runner
       script-path: jenkins/api.groovy
 
 
